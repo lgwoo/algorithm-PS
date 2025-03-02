@@ -1,29 +1,20 @@
-a = int(input())
-plat = [["*" for i in range(a)] for i in range(a)]
+import sys
+input = sys.stdin.readline
 
+n, m = map(int, input().split())
+nums = sorted(list(map(int, input().split())))
 
-def loop(startx,starty,size):
-    ls = int(size/3)
-    for i in range(ls):
-        for j in range(ls):
-            plat[startx+ls+i][starty+ls+j] = " "
-
-    if ls == 1:
+def dfs(depth, used, temp):
+    if depth == m:
+        print(*temp)
         return
-    loop(startx, starty, ls)
-    loop(startx+ls, starty, ls)
-    loop(startx+ls*2, starty, ls)
+    
+    last = 0
+    for i in range(n):
+        if i not in used and last != nums[i]:
+            used.add(i)
+            dfs(depth + 1, used, temp + [nums[i]])
+            used.remove(i)
+            last = nums[i]
 
-    loop(startx, starty+ls, ls)
-
-    loop(startx+ls*2,starty+ls, ls)
-
-    loop(startx, starty+ls*2, ls)
-    loop(startx+ls, starty+ls*2, ls)
-    loop(startx+ls*2, starty+ls*2, ls)
-
-
-loop(0,0,a)
-
-for i in plat:
-    print(*i,sep='')
+dfs(0, set(), [])
