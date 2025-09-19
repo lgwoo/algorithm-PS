@@ -1,20 +1,13 @@
 import sys
 input = sys.stdin.readline
 
-n, m = map(int, input().split())
-nums = sorted(list(map(int, input().split())))
+dic = {'A':'000000','B':'001111', 'C':'010011','D' : '011100',
+'E' : '100110',
+'F' : '101001',
+'G' : '110101',
+'H' : '111010'}
 
-def dfs(depth, used, temp):
-    if depth == m:
-        print(*temp)
-        return
-    
-    last = 0
-    for i in range(n):
-        if i not in used and last != nums[i]:
-            used.add(i)
-            dfs(depth + 1, used, temp + [nums[i]])
-            used.remove(i)
-            last = nums[i]
-
-dfs(0, set(), [])
+n = int(input())
+stri = input().rstrip()
+for i in range(n):
+    stri[0+i*6:6+i*6] =
