@@ -1,7 +1,8 @@
 import sys
 input = sys.stdin.readline
+
 n = int(input())
-ans = 1
+lis = [0]*n
 for i in range(n):
-    ans += int(input())-1
-print(ans)
+    lis[i] = i*2+1
+print(*lis)
