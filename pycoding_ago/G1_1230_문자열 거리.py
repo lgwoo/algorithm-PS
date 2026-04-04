@@ -13,7 +13,7 @@ for i in range(len(o)+1):
     for j in range(len(n)+1):
         # 1) 매칭 전이
         # if i < len(o) and j < len(n) and o[i] == n[j]:
-        #     ...
+        #     dp[i][j][togle] = min(dp[i][j][togle], dp[i-1][j-1][togle]+1)
 
         # 2) 삽입 전이
         # if j < len(n):
