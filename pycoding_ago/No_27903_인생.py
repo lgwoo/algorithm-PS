@@ -1,0 +1,8 @@
+print(chr(500-400+8),end='')
+print(chr(507-404),end='')
+print(chr(559-440),end='')
+print(chr(555-444),end='')
+print(chr(555-444),end='')
+print(9-6,end='')
+print(9-7,end='')
+print(9-8,end='')
