@@ -2,7 +2,7 @@ import os
 import re
 
 # 작업할 폴더 경로 (현재 폴더면 '.' 사용)
-folder_path = 'D:\\doctorWHO\\[미드] 닥터 후 시즌 2 Doctor.Who.2006.S02.13부작완결.720p.한글자막'
+folder_path = 'D:\doctorWHO\[미드] 닥터 후 시즌 7 Doctor.Who.2012.S07.13부작완결.720p.한글자막'
 
 for filename in os.listdir(folder_path):
     # S02E02 같은 패턴 찾기
