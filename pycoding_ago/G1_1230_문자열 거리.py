@@ -4,5 +4,21 @@ input = sys.stdin.readline
 o = input().strip()
 n = input().strip()
 
-for i in o:
-    
+index = 0
+togle = True
+ans = 0
+dp = [[[float('INF') for _ in range(2)] for _ in range(len(n))] for _ in range(len(o))]
+
+for i in range(len(o)+1):
+    for j in range(len(n)+1):
+        # 1) 매칭 전이
+        # if i < len(o) and j < len(n) and o[i] == n[j]:
+        #     ...
+
+        # 2) 삽입 전이
+        # if j < len(n):
+        #     ...
+
+
+print(ans)
+
